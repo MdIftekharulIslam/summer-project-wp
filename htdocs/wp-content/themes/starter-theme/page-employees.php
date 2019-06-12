@@ -46,7 +46,7 @@ get_header();
                 
                 <span class="email"><?php esc_html_e( $users_obj->user_email ); ?></span>
                 
-                <?php if ( $job_title ) : ?>
+                <?php if ( $phone ) : ?>
                     <span class="phone"><?php esc_html_e( $phone ); ?></span>
                 <?php endif; ?>
 			</p> 
