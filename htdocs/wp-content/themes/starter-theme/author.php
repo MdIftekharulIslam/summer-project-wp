@@ -1,7 +1,7 @@
 <?php
 
 $user = get_queried_object();
-
+var_dump( $queried_object );
 $user_display_name = $user->display_name;
 $acf_key = 'user_' . $user->ID;
 
