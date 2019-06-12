@@ -14,6 +14,17 @@
             </ul>
         </div>
         <div class="top-bar-right">
-
-        </div>
+            <?php wp_nav_menu(
+                array(
+                    'theme_location' => 'main-menu',
+                )); 
+            ?>
+            <!-- <div class="dropdown-menu"></div>
+            <li class="is-dropdown-submenu-parent">
+                <a href="#"> <?php the_title(); ?> </a>
+                <ul class="menu">
+                    <li><a href="#">Item 1A</a></li>
+                    <li><a href="#">Item 1A</a></li>
+                    <li><a href="#">Item 1A</a></li>
+        </div> -->
     </div>
