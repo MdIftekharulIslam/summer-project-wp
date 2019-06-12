@@ -8,4 +8,7 @@
 // Define the theme version. Bump the version up to update client-side caches.
 define( 'ST_THEME_VERSION', '0.0.0' );
 
+include_once get_template_directory() . '/src/setup.php';
 include_once get_template_directory() . '/src/assets.php';
+include_once get_template_directory() . '/src/acf.php';
+include_once get_template_directory() . '/src/department.php';
