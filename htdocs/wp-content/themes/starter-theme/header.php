@@ -8,23 +8,16 @@
 </head>
 <body>
     <div class="top-bar">
-        <div class="top-bar-left">
-            <ul class="menu">
-                <li class="menu-text"> <?php the_title(); ?> </li>
-            </ul>
-        </div>
+        <div class="top-bar-left"></div>
         <div class="top-bar-right">
             <?php wp_nav_menu(
                 array(
                     'theme_location' => 'main-menu',
+                    'walker' => new F6TopBarMenuWalker(),
+                    'container' => false,
+                    'menu_class' => 'dropdown menu',
+                    'items_wrap'      => '<ul id="%1$s" class="%2$s" data-dropdown-menu>%3$s</ul>',
                 )); 
             ?>
-            <!-- <div class="dropdown-menu"></div>
-            <li class="is-dropdown-submenu-parent">
-                <a href="#"> <?php the_title(); ?> </a>
-                <ul class="menu">
-                    <li><a href="#">Item 1A</a></li>
-                    <li><a href="#">Item 1A</a></li>
-                    <li><a href="#">Item 1A</a></li>
-        </div> -->
+        </div>
     </div>

@@ -7,7 +7,7 @@
 <?php get_header(); ?>
 
     <div class="grid-container">
-        <div class="grid-x grid-padding-x small-up-2 medium-up-3">
+        <div class="grid-x grid-padding-y small-up-2 medium-up-2">
             <?php
             if ( have_posts() ) :
                 while ( have_posts() ) : the_post(); ?>

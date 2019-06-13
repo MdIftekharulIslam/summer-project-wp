@@ -14,6 +14,7 @@ function st_custom_post_type(){
             ),
             'public'      => true,
             'has_archive' => true,
+            'show_in_nav_menus' => true,
         )
     );
 }
