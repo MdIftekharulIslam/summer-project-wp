@@ -1,7 +1,7 @@
 <?php
 
 $user = get_queried_object();
-
+var_dump ($user);
 $user_display_name = $user->display_name;
 $acf_key = 'user_' . $user->ID;
 $user_email = $user->user_email;
@@ -36,21 +36,29 @@ get_header();
     // the loop
     while (have_posts() ) :the_post(); 
     ?>
-    <?php the_title(); ?>
+    <p><?php the_title(); ?></p>
     <?php endwhile; ?>
 
+  
+
+    
+    <div class="text-left">
     <?php
+    // next_posts_link() usage
+    next_posts_link( 'Older Entries');?>
+    </div>
 
-    // next_posts_link() usage with max_num_pages
-    next_posts_link( 'Older Entries');
-    previous_posts_link( 'Newer Entries' );
+    <div class="text-right"> 
+    <?php previous_posts_link( 'Newer Entries' );?>
+    </div>
+    
+    <?php 
+    // clean up after the query and pagination
+    wp_reset_postdata(); 
 
-// clean up after the query and pagination
-wp_reset_postdata(); 
-?>
 
-<?php else:  ?>
-<p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
-<?php endif;
+     else:  ?>
+    <p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
+<?php  endif;
 
 get_footer();
