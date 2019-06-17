@@ -9,9 +9,7 @@
 <body>
     <div class="top-bar">
         <div class="top-bar-left">
-            <ul class="menu">
-                <li class="menu-text"> <?php the_title(); ?> </li>
-            </ul>
+           
         </div>
         <div class="top-bar-right">
 

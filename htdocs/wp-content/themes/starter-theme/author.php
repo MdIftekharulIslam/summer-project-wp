@@ -29,7 +29,28 @@ get_header();
 </ul>
 
 
+<?php if (have_posts() ) : ?>
 
-<?php
+    <hr>
+    <?php
+    // the loop
+    while (have_posts() ) :the_post(); 
+    ?>
+    <?php the_title(); ?>
+    <?php endwhile; ?>
+
+    <?php
+
+    // next_posts_link() usage with max_num_pages
+    next_posts_link( 'Older Entries');
+    previous_posts_link( 'Newer Entries' );
+
+// clean up after the query and pagination
+wp_reset_postdata(); 
+?>
+
+<?php else:  ?>
+<p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
+<?php endif;
 
 get_footer();

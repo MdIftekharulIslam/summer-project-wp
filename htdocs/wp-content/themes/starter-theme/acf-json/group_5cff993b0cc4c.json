@@ -84,6 +84,9 @@
             "maxlength": "",
             "placeholder": "",
             "rows": ""
+            "maxlength": "",
+            "rows": "",
+            "new_lines": ""
         }
     ],
     "location": [
@@ -104,4 +107,5 @@
     "active": 1,
     "description": "",
     "modified": 1560415323
+    "modified": 1560413504
 }

@@ -7,7 +7,8 @@ vendor/*
 
 terraform.tfstate.backup
 .terraform
-
+#sql files
+*.sql
 # WordPress core
 htdocs/wordpress
 
