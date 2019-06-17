@@ -70,7 +70,7 @@
             "key": "field_5d00d248e2f1b",
             "label": "About the employee",
             "name": "about_the_employee",
-            "type": "text",
+            "type": "textarea",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -80,10 +80,10 @@
                 "id": ""
             },
             "default_value": "",
+            "new_lines": "",
+            "maxlength": "",
             "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
+            "rows": ""
         }
     ],
     "location": [
@@ -103,5 +103,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1560337402
+    "modified": 1560415323
 }
