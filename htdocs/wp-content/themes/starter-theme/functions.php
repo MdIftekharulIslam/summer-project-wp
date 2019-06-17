@@ -2,7 +2,7 @@
 /**
  * The main functions file loading all source files.
  *
- * This files should only contain include statements!
+ * This file should only contain include statements!
  */
 
 // Define the theme version. Bump the version up to update client-side caches.
@@ -13,3 +13,4 @@ include_once get_template_directory() . '/src/menus.php';
 include_once get_template_directory() . '/src/assets.php';
 include_once get_template_directory() . '/src/acf.php';
 include_once get_template_directory() . '/src/department.php';
+include_once get_template_directory() . '/src/readmore.php';
