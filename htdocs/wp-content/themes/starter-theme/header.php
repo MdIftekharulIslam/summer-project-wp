@@ -8,7 +8,9 @@
 </head>
 <body>
     <div class="top-bar">
-        <div class="top-bar-left"></div>
+        <div class="top-bar-left">
+            
+        </div>
         <div class="top-bar-right">
             <?php wp_nav_menu(
                 array(
