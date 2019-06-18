@@ -21,7 +21,7 @@ get_header();
 
 ?>
 
-<p>View our amazing team member from all departments in the organisation. </p>
+<h2>View our amazing team members from all departments in the organisation.</h2>
 
 <?php if (! empty ($users)): ?>
 
@@ -104,4 +104,4 @@ get_header();
 <?php endif; ?> 
  -->
 
-
+ <?php get_footer(); ?>

@@ -7,8 +7,16 @@
     <?php wp_head(); ?>
 </head>
 <body>
-    <div class="top-bar">
-        <div class="top-bar-left"></div>
+    <div class="title-bar" data-responsive-toggle="header-top-bar" data-hide-for="medium">
+        <button class="title-bar__toggler" data-toggle="header-top-bar">
+            <span class="menu-icon" type="button"></span>
+            Menu
+        </button>
+    </div>
+    <div class="top-bar" id="header-top-bar">
+        <div class="top-bar-left">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.png" alt="logo">
+        </div>
         <div class="top-bar-right">
             <?php wp_nav_menu(
                 array(

@@ -21,3 +21,9 @@ class F6TopBarMenuWalker extends Walker_Nav_Menu {
 		$output .= "\n$indent<ul class=\"vertical menu\" data-submenu>\n";
 	}
 }
+
+function register_my_footer_menu() {
+    register_nav_menu('footer-menu',__( 'Footer Menu' ));
+}
+
+add_action( 'init', 'register_my_menu' );

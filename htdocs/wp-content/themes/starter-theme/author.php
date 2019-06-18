@@ -31,19 +31,20 @@ get_header();
 
 <?php if (have_posts() ) : ?>
 
-    <hr>
-    <?php
-    // the loop
-    while (have_posts() ) :the_post(); 
-    ?>
-    <?php the_title(); ?>
-    <?php endwhile; ?>
+<hr>
+<?php
+// the loop
+while (have_posts() ) :the_post(); 
+?>
+<a href="<?php echo esc_url( get_permalink() ); ?>"><?php the_title(); ?>
+</a>
+<?php endwhile; ?>
 
-    <?php
+<?php
 
-    // next_posts_link() usage with max_num_pages
-    next_posts_link( 'Older Entries');
-    previous_posts_link( 'Newer Entries' );
+// next_posts_link() usage with max_num_pages
+next_posts_link( 'Older Entries');
+previous_posts_link( 'Newer Entries' );
 
 // clean up after the query and pagination
 wp_reset_postdata(); 
