@@ -13,3 +13,5 @@ include_once get_template_directory() . '/src/menus.php';
 include_once get_template_directory() . '/src/assets.php';
 include_once get_template_directory() . '/src/acf.php';
 include_once get_template_directory() . '/src/department.php';
+include_once get_template_directory() . '/src/events.php';
+
