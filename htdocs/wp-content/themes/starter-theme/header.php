@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <?php wp_head(); ?>
 </head>
-<body>
+<body <?php body_class(); ?>>
     <div class="title-bar" data-responsive-toggle="header-top-bar" data-hide-for="medium">
         <button class="title-bar__toggler" data-toggle="header-top-bar">
             <span class="menu-icon" type="button"></span>

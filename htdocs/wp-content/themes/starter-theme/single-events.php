@@ -10,7 +10,7 @@ get_header();
     <div img src="<?php the_field('event_picture'); ?>" >
     </div>
 
-    <div class="event-title"   
+    <div class="event-title">   
         <h1><?php get_the_title(); ?></h1>
     <div>
 

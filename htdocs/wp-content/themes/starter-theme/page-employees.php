@@ -16,13 +16,27 @@ $users = get_users($args);
 the_post();
 
 $staff = get_field( 'staff_list' ); 
+$hero_image_arr = get_field( 'hero_employee' );
+$hero_image_url = $hero_image_arr['sizes']['large'] ?? '';
 
 get_header();
 
 ?>
 
-<h2>View our amazing team members from all departments in the organisation.</h2>
+<!-- for the hero image -->
 
+
+<section class="hero" style="background-image:url(<?php echo $hero_image_url; ?> );">
+    
+    <div class="hero-inner">
+        <h1>View our amazing team members from all departments in the organisation.</h1> 
+        <a class="btn" href="#our-people">Our People</a>
+    </div> 
+    
+</section>
+
+
+<section id="our-people">
 <?php if (! empty ($users)): ?>
 
     <div class="grid-container">
@@ -56,8 +70,8 @@ get_header();
             
         </div>
     </div>
-
-
+<?php endif; ?> 
+</section>
 
     <!--    from Lawrence 
 <div class="grid-container">
@@ -101,7 +115,7 @@ get_header();
         
  </div>
 
-<?php endif; ?> 
+
  -->
 
  <?php get_footer(); ?>

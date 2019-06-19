@@ -1,12 +1,6 @@
 <?php
 
 
-$args = [
-    'post_type' => 'event',
-];
-
-$event_query = new WP_Query( $args );
-
 get_header();
 
 ?>

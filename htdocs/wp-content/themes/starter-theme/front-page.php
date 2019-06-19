@@ -17,23 +17,61 @@ $post_query = new WP_Query( [
     'post_status' => 'publish',
 ] );
 
-/* TODO: Complete the events query.
-$now = ''; // TODO: when is now and in what format?
+//Complete the events query.
+// TODO: when is now and in what format?
 
+// find date time now
+    $date_now = date('Y-m-d H:i:s');
+    
 $event_query = new WP_Query( [
-    'post_type' => 'event',
-    'posts_per_page' => 6,
+    'post_type' => 'events',
+    'posts_per_page' => 3,
     'post_status' => 'publish',
     'meta_query' => [
-        
-    ]
+        array(
+            'key' => 'starting_time',
+            'compare' => '>=',
+            'value'=> $date_now,
+            'type'=> 'DATETIME'
+        )
+    ],
+    'order'				=> 'ASC',
+	'orderby'			=> 'meta_value',
+	'meta_key'			=> 'starting_time',
+	'meta_type'			=> 'DATETIME'
 ] );
 
-( '2018-06-17 22:24:55' > '2018-06-17 22:59:59' ) === false
+//( '2018-06-17 22:24:55' > '2018-06-17 22:59:59' ) === false
 
-'bbc' > 'bad'
-*/
 
+
+/* 
+function get_upcoming_events($amount = 10) {
+    // find date time now
+    $date_now = date('Y-m-d H:i:s');
+    $time_now = strtotime($date_now);
+    // find date and time bigger than past moment
+    $date_time_now = date($date_now, $time_now);
+    // query events
+    $events = get_posts(array(
+        'posts_per_page'    => $amount,
+        'post_type'            => 'event',
+        'meta_query'         => array(
+            array(
+                'key'            => 'starting_time',
+                'compare'        => '>=',
+                'value'            => $date_time_now,
+                'type'            => 'DATETIME'
+            )
+        ),
+        'order'                => 'ASC',
+        'orderby'            => 'meta_value',
+        'meta_key'            => 'starting_time',
+        'meta_type'            => 'DATETIME'
+    ));
+    return $events;
+ } */
+ 
 
 
 ?>
@@ -67,11 +105,11 @@ $event_query = new WP_Query( [
 <!-- The recent post loop -->
 
 <?php if ( $post_query->have_posts() ) : ?>
+<h2>Recent News Articles</h2>
     <section>
         <div class="grid-container">
             <div class="grid-x grid-margin-x">
-                <div class="cell">
-                    <h2>Recent News Articles</h2>
+                <div class="cell">  
                 </div>
             </div>
             <div class="grid-x grid-padding-x small-up-2 medium-up-4">
@@ -98,46 +136,26 @@ $event_query = new WP_Query( [
     </section>
 <?php endif; ?>
 
-<?php get_footer(); ?>
-
-
-
 <!-- The Event loop -->
-
-
-
 <?php
-
-$args = [
-    'post_type' => 'event',
-];
-
-
-/* $event_start_date = get_field( 'start_date', true );
-$event_end_date = get_field( 'end_date', true );
-$event_venue = get_field( 'event-venue', true );
- */
-
-//the query
-$event_query = new WP_Query ( $args ); 
-
 if ( $event_query->have_posts() ) : ?>
+<h2>Upcoming Events</h2>
 
     <div class="grid-container">
         <div class="grid-x grid-padding-x small-up-2 medium-up-3">
-    
-        <?php while ( $event_query->have_posts() ) : $event_query->the_post(); ?>
-            <div class="cell">
-                <div class="card">
-                    <?php get_the_post_thumbnail(); ?>
-                    <div class="card-section">
-                    <h4><?php the_title(); ?></h4>
-                    <?php get_post_field( 'start_date')  ?>
-                    <?php the_excerpt(); ?>
+        
+            <?php while ( $event_query->have_posts() ) : $event_query->the_post(); ?>
+                <div class="cell">
+                
+                    <div class="card">
+                        <?php get_the_post_thumbnail(); ?>
+                        <div class="card-section">
+                        <h4><?php the_title(); ?></h4>
+                        <?php the_excerpt(); ?>
+                        </div>
                     </div>
                 </div>
-            </div>
-        <?php endwhile; ?>
+            <?php endwhile; ?>
 
         </div>
     </div>
@@ -145,3 +163,5 @@ if ( $event_query->have_posts() ) : ?>
 <?php 
 
 endif;
+
+get_footer(); ?>

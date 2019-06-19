@@ -15,44 +15,9 @@
                 "class": "",
                 "id": ""
             },
-            "display_format": "d\/m\/Y  H:i",
-            "return_format": "d\/m\/Y H:i",
+            "display_format": "Y-m-d H:i:s",
+            "return_format": "Y-m-d H:i:s",
             "first_day": 1
-        },
-        {
-            "key": "field_5d0765c82dd47",
-            "label": "Ending time",
-            "name": "ending_time",
-            "type": "date_time_picker",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "display_format": "d\/m\/Y H:i",
-            "return_format": "d\/m\/Y H:i",
-            "first_day": 1
-        },
-        {
-            "key": "field_5d0767012dd4a",
-            "label": "Location",
-            "name": "location",
-            "type": "google_map",
-            "instructions": "Event location",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "center_lat": "",
-            "center_lng": "",
-            "zoom": "",
-            "height": ""
         },
         {
             "key": "field_5d0766c12dd49",
@@ -77,6 +42,41 @@
             "max_height": "",
             "max_size": "",
             "mime_types": ""
+        },
+        {
+            "key": "field_5d0765c82dd47",
+            "label": "Ending time",
+            "name": "ending_time",
+            "type": "date_time_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "display_format": "Y-m-d H:i:s",
+            "return_format": "Y-m-d H:i:s",
+            "first_day": 1
+        },
+        {
+            "key": "field_5d0767012dd4a",
+            "label": "Location",
+            "name": "location",
+            "type": "google_map",
+            "instructions": "Event location",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "center_lat": "",
+            "center_lng": "",
+            "zoom": "",
+            "height": ""
         }
     ],
     "location": [
@@ -96,5 +96,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1560850256
+    "modified": 1560947376
 }
