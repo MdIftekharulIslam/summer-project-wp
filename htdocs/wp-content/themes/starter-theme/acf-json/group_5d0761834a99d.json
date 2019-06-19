@@ -64,7 +64,7 @@
             "key": "field_5d0767012dd4a",
             "label": "Location",
             "name": "location",
-            "type": "google_map",
+            "type": "text",
             "instructions": "Event location",
             "required": 0,
             "conditional_logic": 0,
@@ -73,10 +73,42 @@
                 "class": "",
                 "id": ""
             },
+<<<<<<< HEAD
             "center_lat": "",
             "center_lng": "",
             "zoom": "",
             "height": ""
+=======
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5d0766c12dd49",
+            "label": "Event picture",
+            "name": "event_picture",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+>>>>>>> 62829ae34fe9b43e6224f4a0753f754f412d59a7
         }
     ],
     "location": [
@@ -96,5 +128,9 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
+<<<<<<< HEAD
     "modified": 1560947376
+=======
+    "modified": 1560928749
+>>>>>>> 62829ae34fe9b43e6224f4a0753f754f412d59a7
 }

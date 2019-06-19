@@ -1,0 +1,9 @@
+	$excerpt = get_the_excerpt(); ?>
+
+					<?php echo strlen($excerpt) > 6 ? substr($excerpt,0,6)."..." : $excerpt;?>
+
+
+
+<?php $excerpt = get_the_excerpt(); ?>
+
+					<?php echo strlen($excerpt) > 40 ? substr($excerpt,0,40)."..." : $excerpt;?>
