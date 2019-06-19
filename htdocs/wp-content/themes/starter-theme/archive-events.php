@@ -35,7 +35,9 @@ get_header();
 					<h5><a href="<?php echo esc_url( get_the_permalink() ); ?>">
 						<?php get_field('starting_time'); ?></a>
 					</h5>
-                    <?php the_excerpt(); ?>
+
+					<?php echo excerpt(11); ?>
+
                     </div>
                 </div>
             </div>
