@@ -22,14 +22,14 @@ $post_type = 'events'
             <div class="cell medium-8 large-8"> 
                 <div><?php $image = get_field('event_picture');
 
-                                if( !empty($image) ): ?>
+                            if( !empty($image) ): ?>
 
                                     <img src="<?php echo $image['sizes']['medium']; ?>" alt="<?php echo $image['alt']; ?>" />
 
                             <?php endif; ?>
                 </div>
 
-                    <div class="event-title"   
+                    <div class="event-title">   
                         <h1><?php the_title(); ?></h1>
                     <div>
 
